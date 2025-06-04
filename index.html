@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+  <title>Unity WebGL Player | TecAlert</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #231F20;
+    }
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+      display: block;
+      background: #231F20;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="unity-canvas" tabindex="-1"></canvas>
+  <script src="Build/TecAlertCiclo3.loader.js"></script>
+  <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "Build/TecAlertCiclo3.data",
+      frameworkUrl: "Build/TecAlertCiclo3.framework.js",
+      codeUrl: "Build/TecAlertCiclo3.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "TecAlert",
+      productVersion: "1.0"
+    });
+  </script>
+</body>
+</html>
